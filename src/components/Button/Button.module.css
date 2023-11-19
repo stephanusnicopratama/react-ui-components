@@ -52,13 +52,13 @@
 }
 
 .button__variant--secondary:hover:enabled {
-  border: 1px solid var(--interactive-fill-brand-active);
+  border: 1px solid var(--primary);
   border-radius: 4px;
 }
 
 .button__variant--secondary:active:enabled {
   background: #e8ecf0;
-  border: 1px solid var(--interactive-fill-brand-active);
+  border: 1px solid var(--primary);
   border-radius: 4px;
 }
 

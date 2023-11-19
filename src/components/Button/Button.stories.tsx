@@ -11,6 +11,10 @@ export default {
       options: ["primary", "secondary"],
       control: { type: "select" },
     },
+    disabled: {
+      options: [true, false],
+      control: { type: "select" },
+    },
   },
 } as Meta<ButtonProps>;
 

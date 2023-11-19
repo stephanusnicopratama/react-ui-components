@@ -1,0 +1,14 @@
+.card {
+  border-radius: 8px;
+  padding: var(--padding-container);
+}
+
+.card__type--elevated {
+  box-shadow: 0px 0px 10px rgba(9, 13, 22, 0.1);
+  background: #ffffff;
+}
+
+.card__type--nude {
+  background: transparent;
+  border: 1px solid #dcdcdc;
+}
