@@ -1,0 +1,30 @@
+export interface ModalProps {
+    children: React.ReactNode;
+    open: boolean;
+    onClose: () => void;
+    className?: string;
+    style?: React.CSSProperties;
+    backdropClassName?: string;
+    backdropStyle?: React.CSSProperties;
+    containerClassName?: string;
+    containerStyle?: React.CSSProperties;
+    closeOnBackdropClick?: boolean;
+    closeOnEscapeKey?: boolean;
+    closeOnOutsideClick?: boolean;
+    disableBackdrop?: boolean;
+    disablePortal?: boolean;
+    disableScrollLock?: boolean;
+    disableTransition?: boolean;
+    focusOnOpen?: boolean;
+    lockFocus?: boolean;
+    modalClassName?: string;
+    modalStyle?: React.CSSProperties;
+    onBackdropClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+    onEscapeKey?: (event: KeyboardEvent) => void;
+    onOutsideClick?: (event: MouseEvent) => void;
+    onOpen?: () => void;
+    portalClassName?: string;
+    portalStyle?: React.CSSProperties;
+    role?: string;
+    zIndex?: number;
+}

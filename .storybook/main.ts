@@ -1,26 +1,33 @@
-import type { StorybookConfig } from "@storybook/react-webpack5";
-import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import type { StorybookConfig } from '@storybook/react-vite';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "storybook-css-modules",
+    '@storybook/addon-links',
+    'storybook-css-modules',
+    '@storybook/addon-docs',
   ],
+
   framework: {
-    name: "@storybook/react-webpack5",
+    name: '@storybook/react-vite',
     options: {},
   },
-  docs: {
-    autodocs: "tag",
-  },
-  webpackFinal: async (config) => {
-    if (config.resolve)
-      config.resolve.plugins = [new TsconfigPathsPlugin()];
 
+  viteFinal: async (config) => {
+    if (config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'utils': path.resolve(__dirname, '../src/utils'),
+        'components': path.resolve(__dirname, '../src/components'),
+        'assets': path.resolve(__dirname, '../src/assets'),
+        'typings': path.resolve(__dirname, '../src/typings'),
+      };
+    }
     return config;
-  }
+  },
 };
 export default config;

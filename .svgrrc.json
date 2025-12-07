@@ -1,0 +1,17 @@
+{
+  "icon": true,
+  "typescript": true,
+  "outDir": "./src",
+  "index": true,
+  "replaceAttrValues": {
+    "black": "{activeColor}",
+    "#000": "{activeColor}",
+    "#344B5A": "{activeColor}",
+    "#333638": "{activeColor}",
+    "#1D1F20": "{activeColor}",
+    "#545A5F": "{activeColor}",
+    "#0384FD": "{activeColor}",
+    "1em": "{size}"
+  },
+  "prettierConfig": "./prettierrc"
+}
