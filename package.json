@@ -47,7 +47,7 @@
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o docs-build -s ./src/assets",
+    "build-storybook": "storybook build -o docs-build",
     "generate-svg": "svgr --icon --config-file .svgrrc.json --index-template ./template-index.js --template ./template.js ./assets",
     "postgenerate-svg": "./scripts/post-generate-icon.sh"
   },

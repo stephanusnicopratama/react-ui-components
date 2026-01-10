@@ -12,6 +12,8 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
   ],
 
+  staticDirs: ['../src/assets'],
+
   framework: {
     name: '@storybook/react-vite',
     options: {},
