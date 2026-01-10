@@ -1,46 +1,86 @@
-# Getting Started with Create React App
+# React UI Components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal React component library built with TypeScript and styled-components.
 
-## Available Scripts
+## 📦 Installation
 
-In the project directory, you can run:
+\`\`\`bash
+npm install react-ui-components
+# or
+yarn add react-ui-components
+# or
+pnpm add react-ui-components
+\`\`\`
 
-### `yarn start`
+## 🚀 Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+\`\`\`tsx
+import { Button, Card, Input } from 'react-ui-components';
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+function App() {
+  return (
+    <Card>
+      <Input placeholder="Enter text..." />
+      <Button variant="primary">Submit</Button>
+    </Card>
+  );
+}
+\`\`\`
 
-### `yarn test`
+## 📚 Components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This library includes the following components:
 
-### `yarn build`
+- **Button** - Versatile button component with multiple variants and sizes
+- **Card** - Container component for grouping content
+- **DatePicker** - Date selection component
+- **Dropdown** - Dropdown menu component
+- **Input** - Text input component
+- **Modal** - Modal dialog component
+- **Spinner** - Loading spinner component
+- **Table** - Data table component
+- **Tabs** - Tabbed interface component
+- **Text** - Typography component
+- **Tooltip** - Tooltip component
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Available Scripts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### \`pnpm storybook\`
 
-### `yarn eject`
+Launches Storybook on [http://localhost:6006](http://localhost:6006) for component development and documentation.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### \`pnpm test\`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Runs the Jest test suite in watch mode.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### \`pnpm rollup\`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Builds the library for production using Rollup. Output is generated in the \`dist\` folder with both CommonJS and ES Module formats.
 
-## Learn More
+#### \`pnpm build-storybook\`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Builds a static version of Storybook for deployment to the \`docs-build\` folder.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### \`pnpm generate-svg\`
+
+Generates React components from SVG files using SVGR.
+
+## 🏗️ Tech Stack
+
+- **React** - UI library
+- **TypeScript** - Type safety
+- **Styled Components** - CSS-in-JS styling
+- **Rollup** - Module bundler
+- **Jest** - Testing framework
+- **Storybook** - Component documentation and development
+- **SVGR** - SVG to React component converter
+
+## 📝 License
+
+ISC
+
+## 📋 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history.
