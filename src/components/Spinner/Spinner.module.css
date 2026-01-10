@@ -1,0 +1,46 @@
+.spinner {
+  border: 3px solid var(--border-default, #e5e7eb);
+  border-top-color: var(--primary, #3b82f6);
+  border-radius: 50%;
+  animation: spinner-rotate 0.8s linear infinite;
+  display: inline-block;
+}
+
+.spinner__size--small {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+
+.spinner__size--medium {
+  width: 32px;
+  height: 32px;
+  border-width: 3px;
+}
+
+.spinner__size--large {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+.spinner-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@keyframes spinner-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
