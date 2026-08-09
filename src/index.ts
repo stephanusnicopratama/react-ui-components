@@ -6,3 +6,8 @@ export * from "./components/Tooltip/Tooltip.component";
 export * from "./components/DatePicker/DatePicker.component";
 export * from "./components/Tabs/Tabs.component";
 export * from "./components/Dropdown/Dropdown.component";
+export * from "./components/Card/Card.component";
+export * from "./components/Carousel/Carousel.component";
+export * from "./components/CheckboxGroup/CheckboxGroup.component";
+export * from "./components/RadioGroup/RadioGroup.component";
+export * from "./components/Toast/Toast.component";

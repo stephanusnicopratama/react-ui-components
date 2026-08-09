@@ -158,11 +158,12 @@
   z-index: 1000;
   max-height: min(300px, calc(100vh - 120px));
   overflow: hidden;
+  padding: 4px;
   animation: dropdown-slide-down 0.2s ease-out;
 }
 
 .dropdown-search-wrapper {
-  padding: 8px;
+  padding: 4px 4px 8px;
   border-bottom: 1px solid var(--border-default, #e5e7eb);
 }
 
@@ -184,6 +185,8 @@
   max-height: 250px;
   overflow-y: auto;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .dropdown-checkbox {
