@@ -1,0 +1,16 @@
+import{a as e,n as t}from"./rolldown-runtime-DkW27tQK.js";import{t as n}from"./react-BZJXY1be.js";import{n as r,t as i}from"./classNames-GJKvnRQ-.js";import{a,i as o,n as s,t as c}from"./Card.component-CGTNyLJC.js";var l,u;function d(){return(d=t((()=>{l=`_tag_r9wu7_1`,u={tag:l,"tag-dot":`_tag-dot_r9wu7_12`,"tag__status--success":`_tag__status--success_r9wu7_19`,"tag__status--failed":`_tag__status--failed_r9wu7_28`,"tag__status--pending":`_tag__status--pending_r9wu7_37`}})))()}var f,p;function m(){return(m=t((()=>{f=e(n()),d(),r(),p=({children:e,status:t=`pending`,className:n})=>f.createElement(`span`,{className:i(u.tag,u[`tag__status--${t}`],n)},f.createElement(`span`,{className:u[`tag-dot`]}),e),p.__docgenInfo={description:``,methods:[],displayName:`Tag`,props:{status:{required:!1,tsType:{name:`union`,raw:`"success" | "failed" | "pending"`,elements:[{name:`literal`,value:`"success"`},{name:`literal`,value:`"failed"`},{name:`literal`,value:`"pending"`}]},description:``,defaultValue:{value:`"pending"`,computed:!1}}},composes:[`HTMLAttributes`]}})))()}var h,g,_,v,y,b,x,S,C;function w(){return(w=t((()=>{h=e(n()),m(),a(),g={title:`Tag`,component:p,argTypes:{status:{options:[`success`,`failed`,`pending`],control:{type:`select`}}}},_=e=>h.createElement(p,e),v=_.bind({}),v.args={status:`pending`,children:`Pending`},y=_.bind({}),y.args={status:`success`,children:`Success`},b=_.bind({}),b.args={status:`failed`,children:`Failed`},x=_.bind({}),x.args={status:`pending`,children:`Pending`},S=()=>h.createElement(c,{type:`elevated`},h.createElement(o,null,`Deployment`,h.createElement(p,{status:`success`},`Succeeded`)),h.createElement(s,null,h.createElement(`div`,{style:{display:`flex`,gap:8,alignItems:`center`}},h.createElement(p,{status:`failed`},`Build failed`),h.createElement(p,{status:`pending`},`Waiting`)))),S.__docgenInfo={description:``,methods:[],displayName:`InsideCard`},v.parameters={...v.parameters,docs:{...v.parameters?.docs,source:{originalSource:`args => <Tag {...args} />`,...v.parameters?.docs?.source}}},y.parameters={...y.parameters,docs:{...y.parameters?.docs,source:{originalSource:`args => <Tag {...args} />`,...y.parameters?.docs?.source}}},b.parameters={...b.parameters,docs:{...b.parameters?.docs,source:{originalSource:`args => <Tag {...args} />`,...b.parameters?.docs?.source}}},x.parameters={...x.parameters,docs:{...x.parameters?.docs,source:{originalSource:`args => <Tag {...args} />`,...x.parameters?.docs?.source}}},S.parameters={...S.parameters,docs:{...S.parameters?.docs,source:{originalSource:`() => <Card type="elevated">
+    <CardTitle>
+      Deployment
+      <Tag status="success">Succeeded</Tag>
+    </CardTitle>
+    <CardBody>
+      <div style={{
+      display: "flex",
+      gap: 8,
+      alignItems: "center"
+    }}>
+        <Tag status="failed">Build failed</Tag>
+        <Tag status="pending">Waiting</Tag>
+      </div>
+    </CardBody>
+  </Card>`,...S.parameters?.docs?.source}}},C=[`TagComponent`,`Success`,`Failed`,`Pending`,`InsideCard`]})))()}w();export{b as Failed,S as InsideCard,x as Pending,y as Success,v as TagComponent,C as __namedExportsOrder,g as default};
