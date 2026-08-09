@@ -2,6 +2,7 @@ export interface ModalProps {
     children: React.ReactNode;
     open: boolean;
     onClose: () => void;
+    title?: string;
     className?: string;
     style?: React.CSSProperties;
     backdropClassName?: string;

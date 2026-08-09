@@ -11,6 +11,19 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 declare const Button: ({ children, fullWidth, variant, className, icon, iconPosition, size, ...rest }: ButtonProps) => React$1.JSX.Element;
 
+interface AccordionItem {
+    title: ReactNode;
+    content: ReactNode;
+    disabled?: boolean;
+}
+interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
+    items: AccordionItem[];
+    defaultOpenIndex?: number | number[];
+    allowMultiple?: boolean;
+}
+
+declare const Accordion: ({ items, defaultOpenIndex, allowMultiple, className, }: AccordionProps) => React$1.JSX.Element;
+
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
     type?: 'nude' | 'elevated';
 }
@@ -43,12 +56,14 @@ interface CheckboxOption {
     value: string;
     disabled?: boolean;
 }
-interface CheckboxGroupProps extends HTMLAttributes<HTMLDivElement> {
+interface CheckboxGroupProps {
     options: CheckboxOption[];
     value?: string[];
     onChange?: (value: string[]) => void;
     label?: string;
     direction?: "vertical" | "horizontal";
+    className?: string;
+    children?: ReactNode;
 }
 
 declare const CheckboxGroup: ({ options, value, onChange, label, direction, className, }: CheckboxGroupProps) => React$1.JSX.Element;
@@ -102,6 +117,7 @@ interface ModalProps {
     children: React.ReactNode;
     open: boolean;
     onClose: () => void;
+    title?: string;
     className?: string;
     style?: React.CSSProperties;
     backdropClassName?: string;
@@ -148,13 +164,15 @@ interface RadioOption {
     value: string;
     disabled?: boolean;
 }
-interface RadioGroupProps extends HTMLAttributes<HTMLDivElement> {
+interface RadioGroupProps {
     options: RadioOption[];
     value?: string;
     onChange?: (value: string) => void;
     label?: string;
     direction?: "vertical" | "horizontal";
     name?: string;
+    className?: string;
+    children?: ReactNode;
 }
 
 declare const RadioGroup: ({ options, value, onChange, label, direction, name, className, }: RadioGroupProps) => React$1.JSX.Element;
@@ -216,7 +234,7 @@ interface TagProps extends HTMLAttributes<HTMLSpanElement> {
 declare const Tag: ({ children, status, className }: TagProps) => React$1.JSX.Element;
 
 interface TextProps extends HTMLAttributes<HTMLParagraphElement | HTMLLabelElement> {
-    as?: keyof Pick<JSX.IntrinsicElements, "p" | "label">;
+    as?: "p" | "label";
     bold?: boolean;
     className?: string;
     textAlignCenter?: boolean;
@@ -251,4 +269,4 @@ interface TooltipProps {
 
 declare const Tooltip: ({ children, content, position, className, }: TooltipProps) => React$1.JSX.Element;
 
-export { Button, Card, CardBody, CardFooter, CardTitle, Carousel, CheckboxGroup, DatePicker, Dropdown, Input, Modal, ModalBody, ModalFooter, ModalTitle, RadioGroup, Skeleton, Spinner, Table, Tabs, Tag, Text, Toast, Tooltip };
+export { Accordion, Button, Card, CardBody, CardFooter, CardTitle, Carousel, CheckboxGroup, DatePicker, Dropdown, Input, Modal, ModalBody, ModalFooter, ModalTitle, RadioGroup, Skeleton, Spinner, Table, Tabs, Tag, Text, Toast, Tooltip };

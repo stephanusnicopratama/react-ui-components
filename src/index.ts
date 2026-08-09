@@ -1,4 +1,5 @@
 export { default as Button } from "./components/Button/Button.component";
+export { default as Accordion } from "./components/Accordion/Accordion.component";
 export { default as Card } from "./components/Card/Card.component";
 export * from "./components/Card/Card.component";
 export { default as Carousel } from "./components/Carousel/Carousel.component";

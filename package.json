@@ -15,6 +15,7 @@
     "@rollup/plugin-typescript": "^12.3.0",
     "@storybook/addon-docs": "^10.5.7",
     "@storybook/addon-links": "^10.5.7",
+    "@storybook/react": "^10.5.7",
     "@storybook/react-vite": "^10.5.7",
     "@svgr/cli": "^8.1.0",
     "@testing-library/jest-dom": "^7.0.0",

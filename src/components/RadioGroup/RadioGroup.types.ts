@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react";
+import { ReactNode } from "react";
 
 export interface RadioOption {
   label: string;
@@ -6,11 +6,13 @@ export interface RadioOption {
   disabled?: boolean;
 }
 
-export interface RadioGroupProps extends HTMLAttributes<HTMLDivElement> {
+export interface RadioGroupProps {
   options: RadioOption[];
   value?: string;
   onChange?: (value: string) => void;
   label?: string;
   direction?: "vertical" | "horizontal";
   name?: string;
+  className?: string;
+  children?: ReactNode;
 }

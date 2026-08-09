@@ -2,7 +2,7 @@ import { HTMLAttributes } from "react";
 
 export interface TextProps
   extends HTMLAttributes<HTMLParagraphElement | HTMLLabelElement> {
-  as?: keyof Pick<JSX.IntrinsicElements, "p" | "label">;
+  as?: "p" | "label";
   bold?: boolean;
   className?: string;
   textAlignCenter?: boolean;

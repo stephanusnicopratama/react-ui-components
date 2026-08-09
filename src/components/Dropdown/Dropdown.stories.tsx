@@ -99,7 +99,7 @@ export const Controlled = () => {
         label="Controlled Dropdown"
         options={sampleOptions}
         value={value}
-        onChange={setValue}
+        onChange={(v) => setValue(typeof v === "string" ? v : (v[0] ?? ""))}
       />
       <p style={{ marginTop: "16px" }}>Selected value: {value}</p>
     </div>
