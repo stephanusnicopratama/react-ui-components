@@ -8,11 +8,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: {
-      'utils': path.resolve(__dirname, './src/utils'),
-      'components': path.resolve(__dirname, './src/components'),
-      'assets': path.resolve(__dirname, './src/assets'),
-      'typings': path.resolve(__dirname, './src/typings'),
-    },
+    alias: [
+      { find: 'utils', replacement: path.resolve(__dirname, './src/utils') },
+      { find: 'components', replacement: path.resolve(__dirname, './src/components') },
+      { find: 'assets', replacement: path.resolve(__dirname, './src/assets') },
+      { find: 'typings', replacement: path.resolve(__dirname, './src/typings') },
+    ],
   },
 });

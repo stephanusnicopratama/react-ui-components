@@ -8,7 +8,6 @@ const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
-    'storybook-css-modules',
     '@storybook/addon-docs',
   ],
 
@@ -20,15 +19,15 @@ const config: StorybookConfig = {
   },
 
   viteFinal: async (config) => {
-    if (config.resolve) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        'utils': path.resolve(__dirname, '../src/utils'),
-        'components': path.resolve(__dirname, '../src/components'),
-        'assets': path.resolve(__dirname, '../src/assets'),
-        'typings': path.resolve(__dirname, '../src/typings'),
-      };
-    }
+    if (!config.resolve) config.resolve = {};
+    const base = Array.isArray(config.resolve.alias) ? config.resolve.alias : [];
+    config.resolve.alias = [
+      ...base,
+      { find: 'utils', replacement: path.resolve(__dirname, '../src/utils') },
+      { find: 'components', replacement: path.resolve(__dirname, '../src/components') },
+      { find: 'assets', replacement: path.resolve(__dirname, '../src/assets') },
+      { find: 'typings', replacement: path.resolve(__dirname, '../src/typings') },
+    ];
     return config;
   },
 };
