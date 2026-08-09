@@ -1,0 +1,13 @@
+import{a as e,n as t}from"./rolldown-runtime-DkW27tQK.js";import{t as n}from"./react-BZJXY1be.js";import{t as r}from"./react-dom-BzEl8usk.js";import{n as i,t as a}from"./Button.component-D0cP0HdM.js";var o,s;function c(){return(c=t((()=>{o=`_modal_agxsw_1`,s={modal:o,"modal-header":`_modal-header_agxsw_15`,"modal-title":`_modal-title_agxsw_24`,"modal-close":`_modal-close_agxsw_29`,"modal-body":`_modal-body_agxsw_36`,"modal-footer":`_modal-footer_agxsw_41`,"modal-button":`_modal-button_agxsw_49`,"modal-backdrop":`_modal-backdrop_agxsw_63`}})))()}var l,u,d,f,p,m;function h(){return(h=t((()=>{l=e(n()),c(),u=e(r()),d=({children:e})=>l.createElement(`div`,{className:s[`modal-header`]},e),f=({children:e})=>l.createElement(`div`,{className:s[`modal-body`]},e),p=({children:e})=>l.createElement(`div`,{className:s[`modal-footer`]},e),m=({children:e,open:t})=>t?u.createPortal(l.createElement(l.Fragment,null,l.createElement(`div`,{className:s[`modal-backdrop`]}),l.createElement(`div`,{className:s.modal},e)),document.body):null,d.__docgenInfo={description:``,methods:[],displayName:`ModalTitle`,props:{children:{required:!1,tsType:{name:`ReactReactNode`,raw:`React.ReactNode`},description:``}}},f.__docgenInfo={description:``,methods:[],displayName:`ModalBody`,props:{children:{required:!1,tsType:{name:`ReactReactNode`,raw:`React.ReactNode`},description:``}}},p.__docgenInfo={description:``,methods:[],displayName:`ModalFooter`,props:{children:{required:!1,tsType:{name:`ReactReactNode`,raw:`React.ReactNode`},description:``}}}})))()}var g,_,v,y,b;function x(){return(x=t((()=>{g=e(n()),h(),i(),_={title:`Modal`,component:m,argTypes:{open:{control:{type:`boolean`}}}},v=e=>{let[t,n]=g.useState(!1);return g.createElement(g.Fragment,null,g.createElement(a,{onClick:()=>n(!0)},`Open Modal`),g.createElement(m,{...e,open:e.open||t},g.createElement(d,null,`Title`),g.createElement(f,null,`Body`),g.createElement(p,null,g.createElement(a,{onClick:()=>n(!1)},`Close`))))},y=v.bind({}),y.args={children:`Hello world!`},y.parameters={...y.parameters,docs:{...y.parameters?.docs,source:{originalSource:`args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  return <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal {...args} open={args.open || isOpen}>
+        <ModalTitle>Title</ModalTitle>
+        <ModalBody>Body</ModalBody>
+        <ModalFooter>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </ModalFooter>
+      </Modal>
+    </>;
+}`,...y.parameters?.docs?.source}}},b=[`ModalComponent`]})))()}x();export{y as ModalComponent,b as __namedExportsOrder,_ as default};
