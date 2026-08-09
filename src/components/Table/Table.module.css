@@ -19,7 +19,7 @@
 
 .table-head {
   background-color: var(--background-subtle, #f9fafb);
-  border-bottom: 2px solid var(--border-default, #e5e7eb);
+  border-bottom: 2px solid var(--border-divider);
 }
 
 .table-header {
@@ -54,7 +54,7 @@
 }
 
 .table-row {
-  border-bottom: 1px solid var(--border-default, #e5e7eb);
+  border-bottom: 1px solid var(--border-divider);
   transition: background-color 0.15s;
 }
 
@@ -71,12 +71,12 @@
 }
 
 .table__bordered {
-  border: 1px solid var(--border-default, #e5e7eb);
+  border: 1px solid var(--border-divider);
 }
 
 .table__bordered .table-header,
 .table__bordered .table-cell {
-  border-right: 1px solid var(--border-default, #e5e7eb);
+  border-right: 1px solid var(--border-divider);
 }
 
 .table__bordered .table-header:last-child,

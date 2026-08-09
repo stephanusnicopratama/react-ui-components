@@ -11,3 +11,5 @@ export * from "./components/Carousel/Carousel.component";
 export * from "./components/CheckboxGroup/CheckboxGroup.component";
 export * from "./components/RadioGroup/RadioGroup.component";
 export * from "./components/Toast/Toast.component";
+export * from "./components/Tag/Tag.component";
+export * from "./components/Skeleton/Skeleton.component";

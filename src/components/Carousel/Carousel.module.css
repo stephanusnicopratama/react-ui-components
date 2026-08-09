@@ -36,8 +36,8 @@
   height: 36px;
   border: none;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  background: var(--background-overlay);
+  color: var(--text-on-brand);
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
@@ -48,7 +48,7 @@
 }
 
 .carousel-arrow:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--background-inverse);
 }
 
 .carousel-arrow__prev {
@@ -72,11 +72,11 @@
   border: none;
   border-radius: 50%;
   padding: 0;
-  background: #d1d5db;
+  background: var(--border-default);
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .carousel-dot__active {
-  background: #3b82f6;
+  background: var(--primary);
 }

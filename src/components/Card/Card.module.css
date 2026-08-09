@@ -1,25 +1,25 @@
 .card {
-  border-radius: 8px;
+  border-radius: var(--radius);
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .card__type--elevated {
-  box-shadow: 0px 0px 10px rgba(9, 13, 22, 0.1);
-  background: #ffffff;
+  box-shadow: var(--shadow-elevated);
+  background: var(--background-default);
 }
 
 .card__type--nude {
   background: transparent;
-  border: 1px solid #dcdcdc;
+  border: 1px solid var(--border-default);
 }
 
 .card-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--border-divider);
   padding-bottom: 10px;
   margin-bottom: 16px;
   font-size: 1.125rem;
@@ -29,13 +29,13 @@
 .card-body {
   flex: 1;
   font-size: 1rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .card-footer {
   display: flex;
   justify-content: flex-end;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid var(--border-divider);
   padding-top: 10px;
   margin-top: 16px;
 }

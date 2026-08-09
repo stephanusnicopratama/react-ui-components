@@ -1,0 +1,42 @@
+.skeleton {
+  display: block;
+  background: var(--border-divider);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: skeleton-shimmer 1.5s infinite;
+}
+
+.skeleton__variant--text {
+  height: 14px;
+}
+
+.skeleton__variant--circle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.skeleton__variant--rect {
+  height: 80px;
+  border-radius: var(--radius);
+}
+
+@keyframes skeleton-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}

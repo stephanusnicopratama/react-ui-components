@@ -29,7 +29,7 @@
 }
 
 .text__color--default {
-  color: #243658;
+  color: var(--text-primary);
 }
 
 .text__color--disabled {
@@ -45,5 +45,5 @@
 }
 
 .text__color--error {
-  color: #de3509;
+  color: var(--error);
 }

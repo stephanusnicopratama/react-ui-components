@@ -48,7 +48,7 @@
 .checkbox-option-box {
   width: 18px;
   height: 18px;
-  border: 2px solid #d1d5db;
+  border: 2px solid var(--border-default);
   border-radius: 3px;
   display: inline-flex;
   align-items: center;
@@ -61,8 +61,8 @@
 }
 
 .checkbox-option-input:checked + .checkbox-option-box {
-  background-color: var(--primary, #3b82f6);
-  border-color: var(--primary, #3b82f6);
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .checkbox-option-input:focus-visible + .checkbox-option-box {
@@ -70,9 +70,9 @@
 }
 
 .checkbox-option:hover .checkbox-option-box {
-  border-color: var(--primary, #3b82f6);
+  border-color: var(--primary);
 }
 
 .checkbox-option__disabled:hover .checkbox-option-box {
-  border-color: #d1d5db;
+  border-color: var(--border-default);
 }

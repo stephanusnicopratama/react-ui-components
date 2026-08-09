@@ -5,7 +5,7 @@
 .tabs-list {
   display: flex;
   gap: 4px;
-  border-bottom: 2px solid var(--border-default, #e5e7eb);
+  border-bottom: 2px solid var(--border-divider);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
