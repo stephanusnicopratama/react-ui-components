@@ -29,6 +29,14 @@
   text-align: left;
 }
 
+@media (max-width: 640px) {
+  .table-header,
+  .table-cell {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
 .table-header__align--left {
   text-align: left;
 }

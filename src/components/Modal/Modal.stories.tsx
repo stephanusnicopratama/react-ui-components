@@ -8,9 +8,10 @@ export default {
   title: 'Modal',
   component: Modal,
   argTypes: {
-    open: {
-      control: { type: 'boolean' },
-    },
+    open: { control: { type: 'boolean' } },
+    closeOnBackdropClick: { control: { type: 'boolean' } },
+    closeOnOutsideClick: { control: { type: 'boolean' } },
+    closeOnEscapeKey: { control: { type: 'boolean' } },
   },
 } as Meta<ModalProps>;
 
@@ -20,9 +21,13 @@ const Template: StoryFn<ModalProps> = (args) => {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
-      <Modal {...args} open={args.open || isOpen}>
-        <ModalTitle>Title</ModalTitle>
-        <ModalBody>Body</ModalBody>
+      <Modal
+        {...args}
+        open={args.open || isOpen}
+        onClose={() => setIsOpen(false)}
+      >
+        <ModalTitle>{args.title || 'Title'}</ModalTitle>
+        <ModalBody>Click outside or press Escape to close.</ModalBody>
         <ModalFooter>
           <Button onClick={() => setIsOpen(false)}>Close</Button>
         </ModalFooter>
@@ -31,7 +36,26 @@ const Template: StoryFn<ModalProps> = (args) => {
   );
 };
 
-export const ModalComponent = Template.bind({});
-ModalComponent.args = {
-  children: 'Hello world!',
+export const Default = Template.bind({});
+Default.args = {
+  title: 'Default Modal',
+  closeOnBackdropClick: true,
+  closeOnEscapeKey: true,
+  closeOnOutsideClick: false,
+};
+
+export const CloseOnOutsideClick = Template.bind({});
+CloseOnOutsideClick.args = {
+  title: 'Outside Click Close',
+  closeOnBackdropClick: true,
+  closeOnEscapeKey: true,
+  closeOnOutsideClick: true,
+};
+
+export const NoClose = Template.bind({});
+NoClose.args = {
+  title: 'No Auto Close',
+  closeOnBackdropClick: false,
+  closeOnEscapeKey: false,
+  closeOnOutsideClick: false,
 };

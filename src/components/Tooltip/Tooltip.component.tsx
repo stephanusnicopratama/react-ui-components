@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import type { TooltipProps } from "./Tooltip.types";
 import style from "./Tooltip.module.css";
 import { classNames } from "utils/classNames";
@@ -10,12 +10,30 @@ const Tooltip = ({
   className,
 }: TooltipProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const show = useCallback(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsVisible(true);
+  }, []);
+
+  const hide = useCallback(() => {
+    timeoutRef.current = setTimeout(() => setIsVisible(false), 100);
+  }, []);
+
+  const toggle = useCallback(() => {
+    setIsVisible((prev) => !prev);
+  }, []);
 
   return (
     <div
       className={classNames(style["tooltip-wrapper"], className)}
-      onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
+      onMouseEnter={show}
+      onMouseLeave={hide}
+      onFocus={show}
+      onBlur={hide}
+      onClick={toggle}
+      tabIndex={0}
     >
       {children}
       {isVisible && (
