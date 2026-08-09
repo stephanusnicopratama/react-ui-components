@@ -1,10 +1,19 @@
+import { createRequire } from "module";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import terser from "@rollup/plugin-terser";
+import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
 
+const require = createRequire(import.meta.url);
 const packageJson = require("./package.json");
+
+const cssPlugin = postcss({
+  modules: true,
+  inject: true,
+  minimize: true,
+});
 
 export default [
   {
@@ -25,12 +34,14 @@ export default [
       terser(),
       resolve(),
       commonjs(),
+      cssPlugin,
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
   },
   {
     input: "src/index.ts",
     output: [{ file: "dist/types.d.ts", format: "es" }],
-    plugins: [dts.default()],
+    plugins: [dts()],
+    external: [/\.css$/],
   },
 ];
